@@ -1,0 +1,16 @@
+{
+  "entities": [
+    {
+      "entityName": "Account",
+      "attributes": {
+        "FirstName": "expression"
+      }
+    },
+    {
+      "entityName": "Address",
+      "attributes": {
+        "Street": "expression"
+      }
+    }
+  ]
+}
