@@ -5,7 +5,7 @@ Parse the Javascript object with the help of provided path
 1. Download the jsonparser module
 2. require the module as below
 
-   var parser = require('parser')
+   var parser = require('jsonparser')
 
 Pass the JSON object and path to the evalaute(arg1, arg2) as arg1 and arg2 respectively,
 
