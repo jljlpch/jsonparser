@@ -7,7 +7,7 @@ Parse the Javascript object with the help of provided path
 
    var parser = require('jsonparser')
 
-Pass the JSON object and path to the evalaute(arg1, arg2) as arg1 and arg2 respectively,
+Pass the JSON object and path to the function evalaute(arg1, arg2) as arg1 and arg2 respectively,
 
 For example you can evaluate myPath on myObject as follow 
 ```json
