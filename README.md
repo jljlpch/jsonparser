@@ -3,11 +3,12 @@ Parse the Javascript object with the help of provided path
 
 #Usage
 1. Download the jsonparser module
-2. require the module as below
+2. Go to the lib (./lib) and add the downloaded module
+3. require the module as below
 
-   var parser = require('jsonparser')
+   var parser = require('./lib/jsonparser')
 
-Pass the JSON object and path to the function evalaute(arg1, arg2) as arg1 and arg2 respectively,
+Pass the JSON object and path to the function evaluate(arg1, arg2) as arg1 and arg2 respectively,
 
 For example you can evaluate myPath on myObject as follow 
 ```json
@@ -78,7 +79,7 @@ var myPath = "//students/subject"
  
 var result = parse.evaluate(myObject, myPath)
 
-similary you can evalaute below expressions 
+similarly you can evaluate below expressions
 
 ```
 '//students/subject'
