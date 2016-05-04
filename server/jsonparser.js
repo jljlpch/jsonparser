@@ -1,4 +1,4 @@
-var parser = require('./../lib/jsonparser.js');
+var parser = require('./../index');
 var http = require('http');
 
 http.createServer(function (request, response) {

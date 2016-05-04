@@ -1,5 +1,5 @@
 'use strict';
-var parser = require('./../jsonparser');
+var parser = require('./../index');
 var parserutil = require('./../lib/parserutils');
 
 var data = {
