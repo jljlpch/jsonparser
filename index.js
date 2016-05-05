@@ -79,7 +79,7 @@ var self = {
         if (cache) {
             tempCache = cache;
         }
-        while (separatedElements < spiltedExpLength - 2) {
+        while (separatedElements < spiltedExpLength - 3) {
             if (tempCache[newexp]) {
                 if (separatedElements == 0) {
                     wholeExpMatch = true;
@@ -164,26 +164,27 @@ var self = {
                             if (_.isArray(beforeMatch[x].match)) {
                                 for (var j = 0; j < beforeMatch[x].match.length; j++) {
                                     for (var t = 0; t < toMatch.length; t++) {
-                                        var collectMatch;
-                                        if (_.isArray(toMatch[t].match)) {
-                                            collectMatch = [];
-                                            for (var s = 0; s < toMatch[t].match.length; s++) {
-                                                collectMatch.push(toMatch[t].match[s]);
-                                            }
-                                        } else {
-                                            collectMatch = toMatch[t].match;
-                                        }
+                                        var collectMatch = toMatch[t].match;
                                         var matchrecord = false;
                                         if (lastBackElement) {
                                             var dm = {};
                                             dm[lastBackElement] = collectMatch;
+                                            if (_.isMatch(beforeMatch[x].match[j], dm)) {
+                                                var proxybeforeMatch = _.clone(beforeMatch[x]);
+                                                proxybeforeMatch.match = [];
+                                                proxybeforeMatch.match.push(beforeMatch[x].match[j]);
+                                                if (!(_.find(matches, proxybeforeMatch))) {
+                                                    matchrecord = proxybeforeMatch;
+                                                    matches.push(matchrecord);
+                                                }
+                                            }
                                         } else {
                                             var dm = collectMatch
-                                        }
-                                        if (_.isMatch(beforeMatch[x].match[j], dm)) {
-                                            if (!(matches.indexOf(beforeMatch[x]) > -1)) {
-                                                matchrecord = beforeMatch[x];
-                                                matches.push(matchrecord);
+                                            if (_.isMatch(beforeMatch[x].match[j], dm)) {
+                                                if (!(matches.indexOf(beforeMatch[x]) > -1)) {
+                                                    matchrecord = beforeMatch[x];
+                                                    matches.push(matchrecord);
+                                                }
                                             }
                                         }
                                     }
