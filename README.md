@@ -79,6 +79,91 @@ var myPath = "//students/subject"
  
 var result = parse.evaluate(myObject, myPath)
 
+result will be array of matching sub-object/property. Each matching sub-object/property will have two parts, one is "match" and second is "reference". "match" is the matching result of myPath on myObject and "reference" is the parent from which match is found.
+
+result of parse.evaluate(myObject, myPath) is shown below 
+```json
+[
+  {
+    "match": [
+      {
+        "primary": "Math",
+        "active": true
+      }
+    ],
+    "reference": {
+      "name": "A",
+      "class": "10",
+      "city": "Mumbai",
+      "subject": [
+        {
+          "primary": "Math",
+          "active": true
+        }
+      ],
+      "teacher": {
+        "Math": "teacher M1",
+        "English": "teacher E1"
+      }
+    }
+  },
+  {
+    "match": [
+      {
+        "primary": "English",
+        "active": true
+      }
+    ],
+    "reference": {
+      "name": "B",
+      "class": "9",
+      "city": "Chennai",
+      "subject": [
+        {
+          "primary": "English",
+          "active": true
+        }
+      ],
+      "teacher": {
+        "Math": "teacher M2",
+        "English": "teacher E2"
+      }
+    }
+  },
+  {
+    "match": [
+      {
+        "primary": "English",
+        "active": true
+      },
+      {
+        "primary": "History",
+        "active": false
+      }
+    ],
+    "reference": {
+      "name": "C",
+      "class": "7",
+      "city": "Chennai",
+      "subject": [
+        {
+          "primary": "English",
+          "active": true
+        },
+        {
+          "primary": "History",
+          "active": false
+        }
+      ],
+      "teacher": {
+        "Math": "teacher M3",
+        "English": "teacher E3"
+      }
+    }
+  }
+]
+```
+
 similarly you can evaluate below expressions
 
 ```
@@ -92,3 +177,5 @@ similarly you can evaluate below expressions
 '//students[class == "7"]/teacher/Math'
 '//students[class == "7"]/teacher/Math'
 ```
+#Utility
+You can also evaluate multiple such myPath for multiple entities on a single JSON by using bulkEvaluate(arg1, agr2). For example, if your JSON contains multiple entities like Account, Address etc then you can use the template/bulkexpression.json, fill it and call the bulkEvaluate(arg1, arg2). An example has been provided in test/parsertest.js.
