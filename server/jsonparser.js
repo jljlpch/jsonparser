@@ -12,7 +12,8 @@ http.createServer(function (request, response) {
         body += chunk;
     }).on('end', function () {
         var inputBody = JSON.parse(body);
-        var result = parser.evaluate(inputBody.input, inputBody.xpath);
+        console.log(JSON.stringify(inputBody))
+        var result = parser.evaluate(inputBody.input, inputBody.xpath, false, inputBody.onlyone);
         console.log('result is: ' + JSON.stringify(result))
         response.writeHead(200, {"Content-Type": "application/json"});
         response.write(JSON.stringify(result));
