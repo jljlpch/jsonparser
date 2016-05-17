@@ -2,7 +2,7 @@
 Parse the Javascript object with the help of provided path
 
 #### Try Online
-Try the json parser editor to test your own data at:
+Try the json parser tool to test your own data at:
 
 [http://jsonparser.mindinmotion.co](http://jsonparser.mindinmotion.co)
 
@@ -180,10 +180,15 @@ similarly you can evaluate below expressions
 '//students[ class == sum(5,2)]/name'
 '//students[ class == max(5,2,10)]/name'
 '//students[class == "7"]/teacher/Math'
-'//students[class == "7"]/teacher/Math'
 ```
 #Utility
 You can also evaluate multiple such myPath for multiple entities on a single JSON by using bulkEvaluate(arg1, agr2). For example, if your JSON contains multiple entities like Account, Address etc then you can use the template/bulkexpression.json, fill it and call the bulkEvaluate(arg1, arg2). An example has been provided in test/parsertest.js.
 
 #Performance comparison - jsonparser/jsel
+Performed test between jsel and json parser on the [object](/template/testObject.json). Test result has been shown below in the performance curve.
 ![ScreenShot](/template/graph.png)
+#####Test Result
+average time (on 20  object) is as follow
+jsel  ~2277.20 ms  
+json parer  ~8.9 ms 
+
