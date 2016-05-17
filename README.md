@@ -181,4 +181,4 @@ similarly you can evaluate below expressions
 You can also evaluate multiple such myPath for multiple entities on a single JSON by using bulkEvaluate(arg1, agr2). For example, if your JSON contains multiple entities like Account, Address etc then you can use the template/bulkexpression.json, fill it and call the bulkEvaluate(arg1, arg2). An example has been provided in test/parsertest.js.
 
 #Performance comparison - jsonparser/jsel
-![ScreenShot](/template/performance-curve.JPG)
+![ScreenShot](/template/graph.png)
