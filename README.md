@@ -1,6 +1,11 @@
 # jsonparser
 Parse the Javascript object with the help of provided path
 
+#### Try Online
+Try the json parser editor to test your own data at:
+
+[http://jsonparser.mindinmotion.co/#/](http://http://jsonparser.mindinmotion.co/#/)
+
 #Usage
 1. Download the jsonparser module
 2. Go to the lib (./lib) and add the downloaded module
