@@ -191,5 +191,5 @@ Performed test between jsel and json parser on the [object](/template/testObject
 Average time (on 20  object) is as follow :
 
 jsel  ~2277.20 ms  
-json parer  ~8.9 ms 
+json parser  ~8.9 ms 
 
