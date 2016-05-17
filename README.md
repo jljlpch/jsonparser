@@ -187,8 +187,8 @@ You can also evaluate multiple such myPath for multiple entities on a single JSO
 #Performance comparison - jsonparser/jsel
 Performed test between jsel and json parser on the [object](/template/testObject.json). Test result has been shown below in the performance curve.
 ![ScreenShot](/template/graph.png)
-#####Test Result
-average time (on 20  object) is as follow
+###Test Result
+Average time (on 20  object) is as follow
 
 jsel  ~2277.20 ms  
 json parer  ~8.9 ms 
